@@ -24,6 +24,7 @@ public class camManager : MonoBehaviour
     }
     void Update()
     {
+        splitScreenUI.GetComponent<RectTransform>().sizeDelta = new Vector2(3, Screen.height);
         if (Mathf.Abs(player1.transform.position.x - player2.transform.position.x) < maxDistance)
         {
             cam.enabled = true;

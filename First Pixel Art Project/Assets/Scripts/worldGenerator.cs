@@ -2,67 +2,101 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
+using static worldGenerator;
 
 public class worldGenerator : MonoBehaviour
 {
     [SerializeField] private Object mapPrefab;
-    [SerializeField] private GameObject mapL;
-    [SerializeField] private GameObject mapC;
-    [SerializeField] private GameObject mapR;
-    [SerializeField] private GameObject mapTemp;
-    [SerializeField] private GameObject player;
-    [SerializeField] private float pXPos;
-    [SerializeField] private int curChunk;
-    [SerializeField] private int lastChunk;
-    [SerializeField] private Vector3 spawn;
+    [SerializeField] private GameObject p1;
+    [SerializeField] private GameObject p2;
+    public Player player1;
+    public Player player2;
+    public Player[] players;
+
+    public class Player
+    {
+        public GameObject player;
+        public float pXPos;
+        public GameObject mapL;
+        public GameObject mapC;
+        public GameObject mapR;
+        public GameObject mapTemp;
+        public int curChunk;
+        public int lastChunk;
+        public Vector3 spawn;
+        public Player(GameObject _player, float _pXPos)
+        {
+            player = _player;
+            pXPos = _pXPos;
+            curChunk = Mathf.RoundToInt(pXPos / 18f);
+        }
+    }
 
     void Start()
     {
-        pXPos = player.transform.position.x;
-        spawn = new Vector2(curChunk * 18, 0);
-        mapC = (GameObject)Instantiate(mapPrefab, spawn, transform.rotation);
+        player1 = new Player(p1, 0f);
+        player2 = new Player(p2, 0f);
+        StartCopy(player1);
+        if (player1.curChunk != player2.curChunk)
+        {
+            StartCopy(player2);
+        }
+    }
 
-        curChunk -= 1;
-        spawn = new Vector2(curChunk * 18, 0);
-        mapL = (GameObject)Instantiate(mapPrefab, spawn, transform.rotation);
+    public void StartCopy(Player _player)
+    {
+        _player.pXPos = _player.player.transform.position.x;
+        _player.spawn = new Vector2(_player.curChunk * 18, 0);
+        _player.mapC = (GameObject)Instantiate(mapPrefab, _player.spawn, transform.rotation);
 
-        curChunk += 2;
-        spawn = new Vector2(curChunk * 18, 0);
-        mapR = (GameObject)Instantiate(mapPrefab, spawn, transform.rotation);
+        _player.curChunk -= 1;
+        _player.spawn = new Vector2(_player.curChunk * 18, 0);
+        _player.mapL = (GameObject)Instantiate(mapPrefab, _player.spawn, transform.rotation);
+
+        _player.curChunk += 2;
+        _player.spawn = new Vector2(_player.curChunk * 18, 0);
+        _player.mapR = (GameObject)Instantiate(mapPrefab, _player.spawn, transform.rotation);
 
 
-        curChunk = Mathf.RoundToInt(pXPos / 18f);
+        _player.curChunk = Mathf.RoundToInt(_player.pXPos / 18f);
     }
 
     void Update()
     {
-        lastChunk = curChunk;
-        pXPos = player.transform.position.x;
-        curChunk = Mathf.RoundToInt(pXPos / 18f);
-
-        if (curChunk != lastChunk)
+        UpdateCopy(player1);
+        if (player1.curChunk != player2.curChunk)
         {
-            if (curChunk > lastChunk)
-            {
-                Debug.Log("Right");
-                spawn = new Vector3((curChunk * 18) + 18, 0, 0);
-                mapL.transform.position = spawn;
+            UpdateCopy(player2);
+        }
+    }
+    public void UpdateCopy(Player _player)
+    {
+        _player.lastChunk = _player.curChunk;
+        _player.pXPos = _player.player.transform.position.x;
+        _player.curChunk = Mathf.RoundToInt(_player.pXPos / 18f);
 
-                mapTemp = mapR;
-                mapR = mapL;
-                mapL = mapC;
-                mapC = mapTemp;
+        if (_player.curChunk != _player.lastChunk)
+        {
+            if (_player.curChunk > _player.lastChunk)
+            {
+                _player.spawn = new Vector3((_player.curChunk * 18) + 18, 0, 0);
+                _player.mapL.transform.position = _player.spawn;
+
+                _player.mapTemp = _player.mapR;
+                _player.mapR = _player.mapL;
+                _player.mapL = _player.mapC;
+                _player.mapC = _player.mapTemp;
             }
-            if (curChunk < lastChunk)
+            if (_player.curChunk < _player.lastChunk)
             {
-                Debug.Log("Left");
-                spawn = new Vector3((curChunk * 18) - 18, 0, 0);
-                mapR.transform.position = spawn;
+                _player.spawn = new Vector3((_player.curChunk * 18) - 18, 0, 0);
+                _player.mapR.transform.position = _player.spawn;
 
-                mapTemp = mapL;
-                mapL = mapR;
-                mapR = mapC;
-                mapC = mapTemp;
+                _player.mapTemp = _player.mapL;
+                _player.mapL = _player.mapR;
+                _player.mapR = _player.mapC;
+                _player.mapC = _player.mapTemp;
             }
 
         }
