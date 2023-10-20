@@ -7,24 +7,23 @@ using static worldGenerator;
 
 public class worldGenerator : MonoBehaviour
 {
-    [SerializeField] private Object mapPrefab;
+    [SerializeField] private Object mapPrefab1;
+    [SerializeField] private Object mapPrefab2;
+    [SerializeField] private Object mapPrefab3;
+    [SerializeField] private Object mapPrefab4;
     [SerializeField] private GameObject p1;
     [SerializeField] private GameObject p2;
+    [SerializeField] public int mapSize;
     public Player player1;
     public Player player2;
     public Player[] players;
+    public Object[] maps;
 
     public class Player
     {
         public GameObject player;
         public float pXPos;
-        public GameObject mapL;
-        public GameObject mapC;
-        public GameObject mapR;
-        public GameObject mapTemp;
         public int curChunk;
-        public int lastChunk;
-        public Vector3 spawn;
         public Player(GameObject _player, float _pXPos)
         {
             player = _player;
@@ -37,66 +36,64 @@ public class worldGenerator : MonoBehaviour
     {
         player1 = new Player(p1, 0f);
         player2 = new Player(p2, 0f);
-        StartCopy(player1);
-        if (player1.curChunk != player2.curChunk)
+        for (int i = 0; i < mapSize; i++)
         {
-            StartCopy(player2);
+            if (i / 3 == 1)
+            {
+                maps[i] = mapPrefab1;
+            }
+            if (i / 3 == 2)
+            {
+                maps[i] = mapPrefab1;
+            }
+            if (i / 3 == 3)
+            {
+                maps[i] = mapPrefab1;
+            }
         }
     }
 
-    public void StartCopy(Player _player)
-    {
-        _player.pXPos = _player.player.transform.position.x;
-        _player.spawn = new Vector2(_player.curChunk * 18, 0);
-        _player.mapC = (GameObject)Instantiate(mapPrefab, _player.spawn, transform.rotation);
-
-        _player.curChunk -= 1;
-        _player.spawn = new Vector2(_player.curChunk * 18, 0);
-        _player.mapL = (GameObject)Instantiate(mapPrefab, _player.spawn, transform.rotation);
-
-        _player.curChunk += 2;
-        _player.spawn = new Vector2(_player.curChunk * 18, 0);
-        _player.mapR = (GameObject)Instantiate(mapPrefab, _player.spawn, transform.rotation);
-
-
-        _player.curChunk = Mathf.RoundToInt(_player.pXPos / 18f);
-    }
 
     void Update()
     {
-        UpdateCopy(player1);
-        if (player1.curChunk != player2.curChunk)
-        {
-            UpdateCopy(player2);
-        }
+
     }
+
+    public void RenderChunks(int[] _chunkNum)
+    {
+        player1.pXPos = player1.player.transform.position.x;
+        player1.curChunk = Mathf.RoundToInt(player1.pXPos / 18f);
+        player2.pXPos = player2.player.transform.position.x;
+        player2.curChunk = Mathf.RoundToInt(player2.pXPos / 18f);
+    }
+
     public void UpdateCopy(Player _player)
     {
         _player.lastChunk = _player.curChunk;
         _player.pXPos = _player.player.transform.position.x;
         _player.curChunk = Mathf.RoundToInt(_player.pXPos / 18f);
 
+
+
+
+
         if (_player.curChunk != _player.lastChunk)
         {
             if (_player.curChunk > _player.lastChunk)
             {
                 _player.spawn = new Vector3((_player.curChunk * 18) + 18, 0, 0);
-                _player.mapL.transform.position = _player.spawn;
-
-                _player.mapTemp = _player.mapR;
-                _player.mapR = _player.mapL;
+                Destroy(_player.mapL);
                 _player.mapL = _player.mapC;
-                _player.mapC = _player.mapTemp;
+                _player.mapC = _player.mapR;
+                _player.mapR = (GameObject)Instantiate(mapPrefab, _player.spawn, transform.rotation);
             }
             if (_player.curChunk < _player.lastChunk)
             {
                 _player.spawn = new Vector3((_player.curChunk * 18) - 18, 0, 0);
-                _player.mapR.transform.position = _player.spawn;
-
-                _player.mapTemp = _player.mapL;
-                _player.mapL = _player.mapR;
+                Destroy(_player.mapR);
                 _player.mapR = _player.mapC;
-                _player.mapC = _player.mapTemp;
+                _player.mapC = _player.mapL;
+                _player.mapL = (GameObject)Instantiate(mapPrefab, _player.spawn, transform.rotation);
             }
 
         }
