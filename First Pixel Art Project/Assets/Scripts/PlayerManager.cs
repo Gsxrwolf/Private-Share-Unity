@@ -43,27 +43,6 @@ public class PlayerManager : MonoBehaviour
         InputCheck();
         AngelCheck(zRotation);
     }
-    private void LateUpdate()
-    {
-        if (Input.GetKeyDown(KeyCode.UpArrow) && !jumping && this.tag == "Player2")
-        {
-            Jump();
-            jumping = true;
-            animator.SetBool("jumping", true);
-            Vector2 force = Vector2.up;
-            force.y += (jumpForce - 20) * Time.deltaTime;
-            rB.AddForce(force, ForceMode2D.Impulse);
-        }
-        if (Input.GetKeyDown(KeyCode.W) && !jumping && this.tag == "Player1")
-        {
-            Jump();
-            jumping = true;
-            animator.SetBool("jumping", true);
-            Vector2 force = Vector2.up;
-            force.y += (jumpForce - 20) * Time.deltaTime;
-            rB.AddForce(force, ForceMode2D.Impulse);
-        }
-    }
     private void InputCheck()
     {
         if (Input.GetKey(KeyCode.LeftArrow) && this.tag == "Player2")
@@ -97,6 +76,24 @@ public class PlayerManager : MonoBehaviour
             playerPos = transform.position;
             playerPos.x += speed * Time.deltaTime;
             transform.position = playerPos;
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !jumping && this.tag == "Player2")
+        {
+            Jump();
+            jumping = true;
+            animator.SetBool("jumping", true);
+            Vector2 force = Vector2.zero;
+            force.y += jumpForce / 2;
+            rB.AddForce(force, ForceMode2D.Impulse);
+        }
+        if (Input.GetKeyDown(KeyCode.W) && !jumping && this.tag == "Player1")
+        {
+            Jump();
+            jumping = true;
+            animator.SetBool("jumping", true);
+            Vector2 force = Vector2.zero;
+            force.y += jumpForce / 2;
+            rB.AddForce(force, ForceMode2D.Impulse);
         }
     }
     public void SprintCheck()
