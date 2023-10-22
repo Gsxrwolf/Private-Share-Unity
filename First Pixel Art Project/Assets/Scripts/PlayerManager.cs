@@ -42,6 +42,11 @@ public class PlayerManager : MonoBehaviour
         SprintCheck();
         InputCheck();
         AngelCheck(zRotation);
+        sR.flipX = true;
+        animator.SetBool("walking", true);
+        playerPos = transform.position;
+        playerPos.x -= speed * Time.deltaTime;
+        transform.position = playerPos;
     }
     private void InputCheck()
     {
@@ -136,7 +141,6 @@ public class PlayerManager : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D gC)
     {
-        Debug.Log("Jumping false " + this);
         jumping = false;
     }
 
