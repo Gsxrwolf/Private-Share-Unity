@@ -140,7 +140,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 112
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -161,7 +161,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 112
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -182,7 +182,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 112
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -203,7 +203,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 112
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -224,7 +224,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 112
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -245,7 +245,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 80
-        y: 112
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -266,7 +266,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 112
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -287,7 +287,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 112
-        y: 112
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -308,7 +308,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 112
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -329,7 +329,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 112
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -350,7 +350,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 112
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -371,7 +371,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 176
-        y: 112
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -392,7 +392,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 112
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -412,8 +412,8 @@ TextureImporter:
       name: sheet_13
       rect:
         serializedVersion: 2
-        x: 208
-        y: 112
+        x: 0
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -433,8 +433,8 @@ TextureImporter:
       name: sheet_14
       rect:
         serializedVersion: 2
-        x: 224
-        y: 112
+        x: 16
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -454,8 +454,8 @@ TextureImporter:
       name: sheet_15
       rect:
         serializedVersion: 2
-        x: 240
-        y: 112
+        x: 32
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -475,8 +475,8 @@ TextureImporter:
       name: sheet_16
       rect:
         serializedVersion: 2
-        x: 256
-        y: 112
+        x: 48
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -496,8 +496,8 @@ TextureImporter:
       name: sheet_17
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
+        x: 64
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -517,8 +517,8 @@ TextureImporter:
       name: sheet_18
       rect:
         serializedVersion: 2
-        x: 16
-        y: 96
+        x: 80
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -538,8 +538,8 @@ TextureImporter:
       name: sheet_19
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
+        x: 96
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -559,8 +559,8 @@ TextureImporter:
       name: sheet_20
       rect:
         serializedVersion: 2
-        x: 48
-        y: 96
+        x: 112
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -580,8 +580,8 @@ TextureImporter:
       name: sheet_21
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
+        x: 128
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -601,8 +601,8 @@ TextureImporter:
       name: sheet_22
       rect:
         serializedVersion: 2
-        x: 80
-        y: 96
+        x: 144
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -622,8 +622,8 @@ TextureImporter:
       name: sheet_23
       rect:
         serializedVersion: 2
-        x: 112
-        y: 96
+        x: 160
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -643,8 +643,8 @@ TextureImporter:
       name: sheet_24
       rect:
         serializedVersion: 2
-        x: 128
-        y: 96
+        x: 176
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -664,8 +664,8 @@ TextureImporter:
       name: sheet_25
       rect:
         serializedVersion: 2
-        x: 144
-        y: 96
+        x: 192
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -685,8 +685,8 @@ TextureImporter:
       name: sheet_26
       rect:
         serializedVersion: 2
-        x: 160
-        y: 96
+        x: 48
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -706,8 +706,8 @@ TextureImporter:
       name: sheet_27
       rect:
         serializedVersion: 2
-        x: 176
-        y: 96
+        x: 64
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -727,8 +727,8 @@ TextureImporter:
       name: sheet_28
       rect:
         serializedVersion: 2
-        x: 192
-        y: 96
+        x: 80
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -748,8 +748,8 @@ TextureImporter:
       name: sheet_29
       rect:
         serializedVersion: 2
-        x: 208
-        y: 96
+        x: 96
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -769,8 +769,8 @@ TextureImporter:
       name: sheet_30
       rect:
         serializedVersion: 2
-        x: 224
-        y: 96
+        x: 112
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -790,8 +790,8 @@ TextureImporter:
       name: sheet_31
       rect:
         serializedVersion: 2
-        x: 240
-        y: 96
+        x: 128
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -811,8 +811,8 @@ TextureImporter:
       name: sheet_32
       rect:
         serializedVersion: 2
-        x: 256
-        y: 96
+        x: 144
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -832,8 +832,8 @@ TextureImporter:
       name: sheet_33
       rect:
         serializedVersion: 2
-        x: 32
-        y: 80
+        x: 160
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -853,8 +853,8 @@ TextureImporter:
       name: sheet_34
       rect:
         serializedVersion: 2
-        x: 48
-        y: 80
+        x: 176
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -874,8 +874,8 @@ TextureImporter:
       name: sheet_35
       rect:
         serializedVersion: 2
-        x: 64
-        y: 80
+        x: 192
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -895,8 +895,8 @@ TextureImporter:
       name: sheet_36
       rect:
         serializedVersion: 2
-        x: 112
-        y: 80
+        x: 0
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -916,8 +916,8 @@ TextureImporter:
       name: sheet_37
       rect:
         serializedVersion: 2
-        x: 128
-        y: 80
+        x: 16
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -937,8 +937,8 @@ TextureImporter:
       name: sheet_38
       rect:
         serializedVersion: 2
-        x: 144
-        y: 80
+        x: 32
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -958,8 +958,8 @@ TextureImporter:
       name: sheet_39
       rect:
         serializedVersion: 2
-        x: 160
-        y: 80
+        x: 48
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -979,8 +979,8 @@ TextureImporter:
       name: sheet_40
       rect:
         serializedVersion: 2
-        x: 176
-        y: 80
+        x: 64
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -1000,8 +1000,8 @@ TextureImporter:
       name: sheet_41
       rect:
         serializedVersion: 2
-        x: 192
-        y: 80
+        x: 80
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -1021,8 +1021,8 @@ TextureImporter:
       name: sheet_42
       rect:
         serializedVersion: 2
-        x: 208
-        y: 80
+        x: 96
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -1042,8 +1042,8 @@ TextureImporter:
       name: sheet_43
       rect:
         serializedVersion: 2
-        x: 224
-        y: 80
+        x: 112
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -1063,8 +1063,8 @@ TextureImporter:
       name: sheet_44
       rect:
         serializedVersion: 2
-        x: 240
-        y: 80
+        x: 128
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -1084,8 +1084,8 @@ TextureImporter:
       name: sheet_45
       rect:
         serializedVersion: 2
-        x: 256
-        y: 80
+        x: 144
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -1105,8 +1105,8 @@ TextureImporter:
       name: sheet_46
       rect:
         serializedVersion: 2
-        x: 48
-        y: 64
+        x: 160
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -1126,8 +1126,8 @@ TextureImporter:
       name: sheet_47
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 176
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -1147,8 +1147,8 @@ TextureImporter:
       name: sheet_48
       rect:
         serializedVersion: 2
-        x: 80
-        y: 64
+        x: 192
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -1168,8 +1168,8 @@ TextureImporter:
       name: sheet_49
       rect:
         serializedVersion: 2
-        x: 112
-        y: 64
+        x: 48
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -1189,8 +1189,8 @@ TextureImporter:
       name: sheet_50
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
+        x: 64
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -1210,8 +1210,8 @@ TextureImporter:
       name: sheet_51
       rect:
         serializedVersion: 2
-        x: 144
-        y: 64
+        x: 80
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -1231,8 +1231,8 @@ TextureImporter:
       name: sheet_52
       rect:
         serializedVersion: 2
-        x: 160
-        y: 64
+        x: 96
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -1252,8 +1252,8 @@ TextureImporter:
       name: sheet_53
       rect:
         serializedVersion: 2
-        x: 176
-        y: 64
+        x: 112
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -1273,8 +1273,8 @@ TextureImporter:
       name: sheet_54
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
+        x: 128
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -1294,8 +1294,8 @@ TextureImporter:
       name: sheet_55
       rect:
         serializedVersion: 2
-        x: 208
-        y: 64
+        x: 144
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -1315,8 +1315,8 @@ TextureImporter:
       name: sheet_56
       rect:
         serializedVersion: 2
-        x: 224
-        y: 64
+        x: 160
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -1336,8 +1336,8 @@ TextureImporter:
       name: sheet_57
       rect:
         serializedVersion: 2
-        x: 240
-        y: 64
+        x: 176
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -1357,8 +1357,8 @@ TextureImporter:
       name: sheet_58
       rect:
         serializedVersion: 2
-        x: 256
-        y: 64
+        x: 192
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -1379,7 +1379,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1400,7 +1400,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1421,7 +1421,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 80
-        y: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1441,8 +1441,8 @@ TextureImporter:
       name: sheet_62
       rect:
         serializedVersion: 2
-        x: 112
-        y: 48
+        x: 96
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1462,8 +1462,8 @@ TextureImporter:
       name: sheet_63
       rect:
         serializedVersion: 2
-        x: 128
-        y: 48
+        x: 112
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1483,8 +1483,8 @@ TextureImporter:
       name: sheet_64
       rect:
         serializedVersion: 2
-        x: 144
-        y: 48
+        x: 128
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1504,8 +1504,8 @@ TextureImporter:
       name: sheet_65
       rect:
         serializedVersion: 2
-        x: 160
-        y: 48
+        x: 144
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1525,8 +1525,8 @@ TextureImporter:
       name: sheet_66
       rect:
         serializedVersion: 2
-        x: 176
-        y: 48
+        x: 160
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1546,8 +1546,8 @@ TextureImporter:
       name: sheet_67
       rect:
         serializedVersion: 2
-        x: 192
-        y: 48
+        x: 176
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1567,8 +1567,8 @@ TextureImporter:
       name: sheet_68
       rect:
         serializedVersion: 2
-        x: 208
-        y: 48
+        x: 192
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1588,8 +1588,8 @@ TextureImporter:
       name: sheet_69
       rect:
         serializedVersion: 2
-        x: 224
-        y: 48
+        x: 48
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1609,8 +1609,8 @@ TextureImporter:
       name: sheet_70
       rect:
         serializedVersion: 2
-        x: 240
-        y: 48
+        x: 64
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1630,8 +1630,8 @@ TextureImporter:
       name: sheet_71
       rect:
         serializedVersion: 2
-        x: 256
-        y: 48
+        x: 80
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1651,8 +1651,8 @@ TextureImporter:
       name: sheet_72
       rect:
         serializedVersion: 2
-        x: 48
-        y: 32
+        x: 96
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1672,8 +1672,8 @@ TextureImporter:
       name: sheet_73
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
+        x: 112
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1693,8 +1693,8 @@ TextureImporter:
       name: sheet_74
       rect:
         serializedVersion: 2
-        x: 112
-        y: 32
+        x: 128
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1714,8 +1714,8 @@ TextureImporter:
       name: sheet_75
       rect:
         serializedVersion: 2
-        x: 128
-        y: 32
+        x: 144
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1735,8 +1735,8 @@ TextureImporter:
       name: sheet_76
       rect:
         serializedVersion: 2
-        x: 144
-        y: 32
+        x: 160
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1756,8 +1756,8 @@ TextureImporter:
       name: sheet_77
       rect:
         serializedVersion: 2
-        x: 160
-        y: 32
+        x: 176
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1777,8 +1777,8 @@ TextureImporter:
       name: sheet_78
       rect:
         serializedVersion: 2
-        x: 176
-        y: 32
+        x: 192
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1790,447 +1790,6 @@ TextureImporter:
       bones: []
       spriteID: cb559055fdddfa64a957ea9f1c9e6013
       internalID: 1753467912
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_79
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ec8a051635ce8c44b8059b4fa3a2f05
-      internalID: -267464776
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_80
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0dd62c6adc8d7341a6efc875d2b1597
-      internalID: -1458886427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_81
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5992c9261e7d9d24085922d26ef65304
-      internalID: 65839382
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_82
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee2604abe71ecba44b4453593ad4203a
-      internalID: -339506065
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_83
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad5b7fc42d82698449da89dfd59b7a16
-      internalID: -1700247015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_84
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d7e7efbdf90fd04ab8594d552cf8984
-      internalID: -1859481610
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_85
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 938c0369f7a01c44f832e94571447bb0
-      internalID: 1004867502
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_86
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24131de8246227c44a99b4f995fcb3e8
-      internalID: 59632565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_87
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e3aee4738cab664dadcd62993cb5ad3
-      internalID: -520914692
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_88
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ced4d4d080c807e4e8e196e315a82fc7
-      internalID: -986259789
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_89
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8695d3c6f1a2050439245d9fd1bdec32
-      internalID: -256655099
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_90
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63e5a3a39ec295f478348fb43d33d137
-      internalID: 1481586863
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_91
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 607f44950521ea844bcb5818651c0754
-      internalID: 1924517084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_92
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0cd25b2c5cb13140b0e539a1f4882d7
-      internalID: -2119932106
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_93
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 557385d44f0b9c54eac392a713317dff
-      internalID: -1768744142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_94
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6fc77f015748ab54282ce0325b23105c
-      internalID: -723779556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_95
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: afbb65c2896731946a8ba0e2a29f5ce9
-      internalID: -2088354658
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_96
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 130e953a3c44af64cbbb3742a4e27380
-      internalID: -320116584
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_97
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd7347431bbf6054f88c3079cc8aeedf
-      internalID: -823890697
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_98
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c8ac6cb65cebbec428c217aa2108cdb7
-      internalID: 1523483593
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_99
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 398a989af0c2262409ba77ccc3c11545
-      internalID: -74751916
       vertices: []
       indices: 
       edges: []
@@ -2323,29 +1882,8 @@ TextureImporter:
       sheet_76: 1911790497
       sheet_77: -77738796
       sheet_78: 1753467912
-      sheet_79: -267464776
       sheet_8: 1841964145
-      sheet_80: -1458886427
-      sheet_81: 65839382
-      sheet_82: -339506065
-      sheet_83: -1700247015
-      sheet_84: -1859481610
-      sheet_85: 1004867502
-      sheet_86: 59632565
-      sheet_87: -520914692
-      sheet_88: -986259789
-      sheet_89: -256655099
       sheet_9: -237581043
-      sheet_90: 1481586863
-      sheet_91: 1924517084
-      sheet_92: -2119932106
-      sheet_93: -1768744142
-      sheet_94: -723779556
-      sheet_95: -2088354658
-      sheet_96: -320116584
-      sheet_97: -823890697
-      sheet_98: 1523483593
-      sheet_99: -74751916
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

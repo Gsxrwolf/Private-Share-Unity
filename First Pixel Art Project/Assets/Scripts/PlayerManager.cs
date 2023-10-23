@@ -42,11 +42,6 @@ public class PlayerManager : MonoBehaviour
         SprintCheck();
         InputCheck();
         AngelCheck(zRotation);
-        sR.flipX = true;
-        animator.SetBool("walking", true);
-        playerPos = transform.position;
-        playerPos.x -= speed * Time.deltaTime;
-        transform.position = playerPos;
     }
     private void InputCheck()
     {
@@ -139,13 +134,21 @@ public class PlayerManager : MonoBehaviour
         if (temp == 1) jumpSound2.Play();
     }
 
-    private void OnTriggerStay2D(Collider2D gC)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        jumping = false;
+        if (other.CompareTag("Floor"))
+        {
+            jumping = false;
+        }
     }
 
-    private void OnTriggerExit2D(Collider2D gC)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        animator.SetBool("jumping", false);
+        if (other.CompareTag("Floor"))
+        {
+            animator.SetBool("jumping", false);
+        }
     }
+
+    
 }

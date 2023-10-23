@@ -38,6 +38,7 @@ public class worldGenerator : MonoBehaviour
     {
         public Object map;
         public float mXPos;
+        public GameObject reference;
         public Chunks(Object _map, float _mXPos)
         {
             map = _map;
@@ -84,13 +85,9 @@ public class worldGenerator : MonoBehaviour
         if(ChunksChanged())
         {
             oldChunksToDelete = lastVisibleChunks.Except(visibleChunks).ToList();
-            if(oldChunksToDelete.Count != 0 )
-            {
-                DeleteOldChunks(oldChunksToDelete);
-            }
-            newChunksToRender = visibleChunks.Except(lastVisibleChunks).ToList();
-            RenderNewChunks(newChunksToRender);
-            lastVisibleChunks = visibleChunks;
+            DeleteOldChunks(oldChunksToDelete);
+            RenderNewChunks(newChunksToRender); 
+            lastVisibleChunks = visibleChunks.ToList();
         }
     }
 
@@ -100,25 +97,24 @@ public class worldGenerator : MonoBehaviour
         foreach (int chunkNum in _chunkNum)
         {
             int curChunkNum = chunkNum + mapSize / 2;
-            Destroy(chunks[curChunkNum].map);
+            Destroy(chunks[curChunkNum].reference);
         }
     }
 
     public bool ChunksChanged()
     {
         Debug.Log("ChunksChanged");
-        bool output;
-        if(lastVisibleChunks == visibleChunks)
+        newChunksToRender = visibleChunks.Except(lastVisibleChunks).ToList();
+        if (newChunksToRender.Count > 0)
         {
-            Debug.Log("not changed");
-            output = false;
+            Debug.Log("changed");
+            return true;
         }
         else
         {
-            Debug.Log("changed");
-            output = true;
+            Debug.Log("not changed");
+            return false;
         }
-        return output;
     }
     public void IdentifyChunkToRender()
     {
@@ -191,7 +187,7 @@ public class worldGenerator : MonoBehaviour
         foreach (int chunkNum in _chunkNum)
         {
             int curChunkNum = chunkNum + mapSize / 2;
-            Instantiate(chunks[curChunkNum].map, new Vector3(chunks[curChunkNum].mXPos * 18,0,0) , transform.rotation);
+            chunks[curChunkNum].reference = (GameObject)Instantiate(chunks[curChunkNum].map, new Vector3(chunks[curChunkNum].mXPos * 18,0,0) , transform.rotation);
         }
     }
 }
