@@ -10,11 +10,6 @@ public class chestInteraction : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     private void OnTriggerStay2D(Collider2D other)
     {
         if(Input.GetKeyDown(KeyCode.E))

@@ -21,10 +21,12 @@ public class PlayerManager : MonoBehaviour
     public float speed = 1f;
     [SerializeField] public float normalSpeed = 2f;
     [SerializeField] public float sprintSpeed = 4f;
+    [SerializeField] public float climbSpeed = 1.5f;
     [SerializeField] public float jumpForce = 1.5f;
     [SerializeField] public float maxRotation = 2f;
     [SerializeField] public bool sprint = false;
     [SerializeField] public bool jumping = false;
+    [SerializeField] public bool climbing = false;
     [SerializeField] public float jumpTime;
 
     private void Start()
@@ -41,8 +43,50 @@ public class PlayerManager : MonoBehaviour
 
         SprintCheck();
         InputCheck();
+        if(!climbing)
+        {
+            JumpCheck();
+        }
+        else
+        {
+            ClimbCheck();
+        }
         AngelCheck(zRotation);
     }
+
+    private void ClimbCheck()
+    {
+        rB.gravityScale = 0;
+        if (Input.GetKey(KeyCode.UpArrow) && this.tag == "Player2")
+        {
+            float force = 0;
+            force += climbSpeed / 2;
+            rB.velocity = new Vector2(rB.velocity.x, force);
+        }
+        else if (Input.GetKey(KeyCode.W) && this.tag == "Player1")
+        {
+            float force = 0;
+            force += climbSpeed / 2;
+            rB.velocity = new Vector2(rB.velocity.x, force);
+        }
+        else if (Input.GetKey(KeyCode.DownArrow) && this.tag == "Player2")
+        {
+            float force = 0;
+            force -= climbSpeed / 2;
+            rB.velocity = new Vector2(rB.velocity.x, force);
+        }
+        else if (Input.GetKey(KeyCode.S) && this.tag == "Player1")
+        {
+            float force = 0;
+            force -= climbSpeed / 2;
+            rB.velocity = new Vector2(rB.velocity.x, force);
+        }
+        else
+        {
+            rB.velocity = new Vector2(rB.velocity.x, 0);
+        }
+    }
+
     private void InputCheck()
     {
         if (Input.GetKey(KeyCode.LeftArrow) && this.tag == "Player2")
@@ -77,6 +121,10 @@ public class PlayerManager : MonoBehaviour
             playerPos.x += speed * Time.deltaTime;
             transform.position = playerPos;
         }
+    }
+    public void JumpCheck()
+    {
+        rB.gravityScale = 1;
         if (Input.GetKeyDown(KeyCode.UpArrow) && !jumping && this.tag == "Player2")
         {
             Jump();
@@ -96,7 +144,7 @@ public class PlayerManager : MonoBehaviour
             rB.AddForce(force, ForceMode2D.Impulse);
         }
     }
-    public void SprintCheck()
+        public void SprintCheck()
     {
         if (Input.GetKey(KeyCode.RightShift) && this.tag == "Player2")
         {

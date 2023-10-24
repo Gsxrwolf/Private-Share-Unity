@@ -5,18 +5,29 @@ using UnityEngine;
 public class climbTrigger : MonoBehaviour
 {
     private GameObject effectedPlayer;
-    void Start()
-    {
-    }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        effectedPlayer = other.gameObject;
-        effectedPlayer.GetComponent<Rigidbody2D>().gravityScale = 0.2f;
+        if (other.CompareTag("Player1") || other.CompareTag("Player2"))
+        {
+            effectedPlayer = other.gameObject;
+            PlayerManager playerManager = effectedPlayer.GetComponent<PlayerManager>();
+            if (playerManager != null)
+            {
+                playerManager.climbing = true;
+            }
+        }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        effectedPlayer = other.gameObject;
-        effectedPlayer.GetComponent<Rigidbody2D>().gravityScale = 1;
+        if (other.CompareTag("Player1") || other.CompareTag("Player2"))
+        {
+            effectedPlayer = other.gameObject;
+            PlayerManager playerManager = effectedPlayer.GetComponent<PlayerManager>();
+            if (playerManager != null)
+            {
+                playerManager.climbing = false;
+            }
+        }
     }
 }

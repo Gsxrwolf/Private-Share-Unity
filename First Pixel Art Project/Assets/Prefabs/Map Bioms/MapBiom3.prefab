@@ -90,7 +90,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c136310900962468751e0a463c190b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallCheck: {fileID: 1611249509581544049}
   fC: {fileID: 3008283413008131696}
 --- !u!1 &2756222384177367996
 GameObject:
@@ -134,26 +133,6 @@ Tilemap:
   m_GameObject: {fileID: 2756222384177367996}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: 4, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 4
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 8, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 4
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -7, y: -1, z: 0}
     second:
       serializedVersion: 2
@@ -262,10 +241,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: a4613fbff1b83854cad750280deb4921, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 43fde6be726289b47912306dc13e8fe6, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 049db8d39f3c1644091ff20e3acff789, type: 2}
   - m_RefCount: 1
@@ -285,10 +264,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 4220225, guid: 8cbb1e31ebce6b444a6d1025e11122b3, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 1548307275, guid: 8cbb1e31ebce6b444a6d1025e11122b3, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 3
     m_Data: {fileID: 1370309170, guid: 8cbb1e31ebce6b444a6d1025e11122b3, type: 3}
   - m_RefCount: 1
@@ -302,7 +281,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -2029459993, guid: 8cbb1e31ebce6b444a6d1025e11122b3, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 12
+  - m_RefCount: 10
     m_Data:
       e00: 1
       e01: 0
@@ -329,7 +308,7 @@ Tilemap:
     m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
   - m_RefCount: 0
     m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - m_RefCount: 12
+  - m_RefCount: 10
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -395,7 +374,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -478,7 +457,7 @@ MonoBehaviour:
   - {x: 0.38236952, y: -0.53101516, z: 0}
   m_ShapePathHash: 1608916301
   m_Mesh: {fileID: 0}
-  m_InstanceId: 112330
+  m_InstanceId: 67506
   m_LocalBounds:
     m_Center: {x: 0.038021564, y: -0.44085485, z: 0}
     m_Extent: {x: 0.34471035, y: 0.09221442, z: 0}
@@ -644,7 +623,7 @@ MonoBehaviour:
   - {x: -1.7634864, y: -0.53321457, z: 0.000000007450581}
   m_ShapePathHash: 1668251299
   m_Mesh: {fileID: 0}
-  m_InstanceId: 112352
+  m_InstanceId: 67528
   m_LocalBounds:
     m_Center: {x: 0.049188614, y: -0.2826513, z: 0}
     m_Extent: {x: 2.187779, y: 0.25176096, z: 0}
@@ -724,7 +703,7 @@ MonoBehaviour:
   - {x: 0.2939253, y: -0.5009973, z: 0}
   m_ShapePathHash: -1702214251
   m_Mesh: {fileID: 0}
-  m_InstanceId: 112312
+  m_InstanceId: 67488
   m_LocalBounds:
     m_Center: {x: -0.047700882, y: -0.21864867, z: 0}
     m_Extent: {x: 0.4073887, y: 0.28339267, z: 0}
@@ -1708,7 +1687,7 @@ MonoBehaviour:
   - {x: 0.38236952, y: -0.53101516, z: 0}
   m_ShapePathHash: 1608916301
   m_Mesh: {fileID: 0}
-  m_InstanceId: 112344
+  m_InstanceId: 67520
   m_LocalBounds:
     m_Center: {x: 0.038021564, y: -0.44085485, z: 0}
     m_Extent: {x: 0.34471035, y: 0.09221442, z: 0}
@@ -6673,7 +6652,7 @@ MonoBehaviour:
   - {x: 0.38236952, y: -0.53101516, z: 0}
   m_ShapePathHash: 1608916301
   m_Mesh: {fileID: 0}
-  m_InstanceId: 112308
+  m_InstanceId: 67484
   m_LocalBounds:
     m_Center: {x: 0.038021564, y: -0.44085485, z: 0}
     m_Extent: {x: 0.34471035, y: 0.09221442, z: 0}
@@ -6751,7 +6730,7 @@ MonoBehaviour:
   - {x: 0.30432224, y: -0.53218603, z: 0}
   m_ShapePathHash: -86930715
   m_Mesh: {fileID: 0}
-  m_InstanceId: 112374
+  m_InstanceId: 67550
   m_LocalBounds:
     m_Center: {x: -0.0413723, y: -0.2779845, z: 0}
     m_Extent: {x: 0.34703732, y: 0.25420153, z: 0}
