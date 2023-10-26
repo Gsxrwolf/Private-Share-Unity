@@ -56,7 +56,6 @@ public class PlayerManager : MonoBehaviour
 
     private void ClimbCheck()
     {
-        rB.gravityScale = 0;
         if (Input.GetKey(KeyCode.UpArrow) && this.tag == "Player2")
         {
             float force = 0;
@@ -124,7 +123,6 @@ public class PlayerManager : MonoBehaviour
     }
     public void JumpCheck()
     {
-        rB.gravityScale = 1;
         if (Input.GetKeyDown(KeyCode.UpArrow) && !jumping && this.tag == "Player2")
         {
             Jump();

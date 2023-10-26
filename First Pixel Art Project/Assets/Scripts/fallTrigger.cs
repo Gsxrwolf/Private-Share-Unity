@@ -14,7 +14,7 @@ public class fallTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         effectedPlayer = other.gameObject;
-        Vector3 teleportPoint = new Vector3(fC.transform.position.x - 2.5f, fC.transform.position.y + 10f);
+        Vector3 teleportPoint = new Vector3(fC.transform.position.x - 0.5f, fC.transform.position.y + 10f);
         effectedPlayer.transform.position = teleportPoint;
     }
 }

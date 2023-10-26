@@ -12,8 +12,10 @@ public class climbTrigger : MonoBehaviour
         {
             effectedPlayer = other.gameObject;
             PlayerManager playerManager = effectedPlayer.GetComponent<PlayerManager>();
+            Rigidbody2D rigidbody2D = effectedPlayer.GetComponent<Rigidbody2D>();
             if (playerManager != null)
             {
+                rigidbody2D.gravityScale = 0;
                 playerManager.climbing = true;
             }
         }
@@ -24,8 +26,10 @@ public class climbTrigger : MonoBehaviour
         {
             effectedPlayer = other.gameObject;
             PlayerManager playerManager = effectedPlayer.GetComponent<PlayerManager>();
+            Rigidbody2D rigidbody2D = effectedPlayer.GetComponent<Rigidbody2D>();
             if (playerManager != null)
             {
+                rigidbody2D.gravityScale = 1;
                 playerManager.climbing = false;
             }
         }

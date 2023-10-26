@@ -12,12 +12,13 @@ public class worldGenerator : MonoBehaviour
     [SerializeField] private Object mapPrefab2;
     [SerializeField] private Object mapPrefab3;
     [SerializeField] private Object mapPrefab4;
+    private int[] biomCounter;
     [SerializeField] private GameObject p1;
     [SerializeField] private GameObject p2;
     [SerializeField] public int mapSize;
     public Player player1;
     public Player player2;
-    public Chunks[] chunks;
+    [SerializeField] public Chunks[] chunks;
     public List<int> visibleChunks = new List<int>();
     public List<int> lastVisibleChunks = new List<int>();
     public List<int> newChunksToRender = new List<int>();
@@ -50,31 +51,40 @@ public class worldGenerator : MonoBehaviour
     {
         player1 = new Player(p1);
         player2 = new Player(p2);
-        chunks = new Chunks[mapSize]; 
+        chunks = new Chunks[mapSize];
+        biomCounter = new int[4];
         System.Random rnd = new System.Random();
         for (int i = 0; i < mapSize; i++)
         {
-            int temp = rnd.Next(0, 4);
-            if (temp == 0)
+            bool valid = false;
+            do
             {
-                Debug.Log("1 i = " + i);
-                chunks[i] = new Chunks(mapPrefab1, i - mapSize / 2);
-            }
-            if (temp == 1)
-            {
-                Debug.Log("2 i = " + i);
-                chunks[i] = new Chunks(mapPrefab2, i - mapSize / 2);
-            }
-            if (temp == 2)
-            {
-                Debug.Log("3 i = " + i);
-                chunks[i] = new Chunks(mapPrefab3, i - mapSize / 2);
-            }
-            if (temp == 3)
-            {
-                Debug.Log("4 i = " + i);
-                chunks[i] = new Chunks(mapPrefab4, i - mapSize / 2);
-            }
+                int temp = rnd.Next(0, 4);
+                if (temp == 0)
+                {
+                    valid = true;
+                    biomCounter[temp] += 1;
+                    chunks[i] = new Chunks(mapPrefab1, i - mapSize / 2);
+                }
+                if (temp == 1 && biomCounter[temp] < 4 && i > mapSize / 2 - mapSize / 4)
+                {
+                    valid = true;
+                    biomCounter[temp] += 1;
+                    chunks[i] = new Chunks(mapPrefab2, i - mapSize / 2);
+                }
+                if (temp == 2)
+                {
+                    valid = true;
+                    biomCounter[temp] += 1;
+                    chunks[i] = new Chunks(mapPrefab3, i - mapSize / 2);
+                }
+                if (temp == 3 && biomCounter[temp] < 1 && i > mapSize/2 - mapSize / 6)
+                {
+                    valid = true;
+                    biomCounter[temp] += 1;
+                    chunks[i] = new Chunks(mapPrefab4, i - mapSize / 2);
+                }
+            } while (!valid);
         }
     }
 
