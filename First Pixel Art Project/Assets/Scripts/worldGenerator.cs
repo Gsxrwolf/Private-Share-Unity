@@ -66,7 +66,7 @@ public class worldGenerator : MonoBehaviour
                     biomCounter[temp] += 1;
                     chunks[i] = new Chunks(mapPrefab1, i - mapSize / 2);
                 }
-                if (temp == 1 && biomCounter[temp] < 4 && i > mapSize / 2 - mapSize / 4)
+                if (temp == 1 && biomCounter[temp] < 3 && i > mapSize / 2 - mapSize / 4)
                 {
                     valid = true;
                     biomCounter[temp] += 1;

@@ -5,19 +5,22 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class camManager : MonoBehaviour
 {
-    [SerializeField] private GameObject player1;
-    [SerializeField] private GameObject player2;
-    [SerializeField] private GameObject camera1;
-    [SerializeField] private GameObject camera2;
-    [SerializeField] private Camera cam;
-    [SerializeField] private Camera cam1;
-    [SerializeField] private Camera cam2;
-    [SerializeField] private Vector2 pos;
-    [SerializeField] private Vector2 pos1;
-    [SerializeField] private Vector2 pos2;
-    [SerializeField] private float maxDistance = 15f;
-
-    [SerializeField] private GameObject splitScreenUI;
+    [SerializeField] public GameObject player1;
+    [SerializeField] public GameObject player2;
+    [SerializeField] public GameObject camera1;
+    [SerializeField] public GameObject camera2;
+    [SerializeField] public Camera cam;
+    [SerializeField] public Camera cam1;
+    [SerializeField] public Camera cam2;
+    [SerializeField] public Vector2 pos;
+    [SerializeField] public Vector2 pos1;
+    [SerializeField] public Vector2 pos2;
+    [SerializeField] public GameObject background;
+    [SerializeField] public GameObject background1;
+    [SerializeField] public GameObject background2;
+    [SerializeField] public float maxDistance = 15f;
+                   
+    [SerializeField] public GameObject splitScreenUI;
 
     private void Start()
     {
@@ -29,7 +32,10 @@ public class camManager : MonoBehaviour
         {
             cam.enabled = true;
             cam1.enabled = false;
-            cam2.enabled = false;
+            cam2.enabled = false; 
+            background.active = true;
+            background1.active = false;
+            background2.active = false;
             splitScreenUI.SetActive(false);
             followBoth();
         }
@@ -39,6 +45,9 @@ public class camManager : MonoBehaviour
             cam2.enabled = true;
             splitScreenUI.SetActive(true);
             cam.enabled = false;
+            background1.active = true;
+            background2.active = true;
+            background.active = false;
             if (player1.transform.position.x - player2.transform.position.x < 0)
             { 
                 followP1(cam1);
