@@ -219,13 +219,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 58644055}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a062ac026559c4341ad75d72be10f077, type: 3}
+  m_Script: {fileID: 11500000, guid: 635c265429200dd4085c002effa56e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camScript: {fileID: 1443551734}
   startPos: 0
-  camera: {fileID: 1443551728}
-  localCam: {fileID: 1443551728}
+  cam: {fileID: 1443551728}
   parallexEffect: 1
+  offset: 0
 --- !u!1 &97108895
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,12 +650,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 375216097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a062ac026559c4341ad75d72be10f077, type: 3}
+  m_Script: {fileID: 11500000, guid: a7e91cd2734c83c42b40fad0a8ffc542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startPos: 0
-  camera: {fileID: 1443551728}
   localCam: {fileID: 508109896}
+  mainCam: {fileID: 1443551728}
+  mainScript: {fileID: 1849582882}
   parallexEffect: 1.5
 --- !u!212 &375216100
 SpriteRenderer:
@@ -2186,12 +2188,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1058830097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a062ac026559c4341ad75d72be10f077, type: 3}
+  m_Script: {fileID: 11500000, guid: a7e91cd2734c83c42b40fad0a8ffc542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startPos: 0
-  camera: {fileID: 1443551728}
   localCam: {fileID: 519420028}
+  mainCam: {fileID: 1443551728}
+  mainScript: {fileID: 1920238765}
   parallexEffect: 2
 --- !u!212 &1058830100
 SpriteRenderer:
@@ -2541,12 +2544,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1421193324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a062ac026559c4341ad75d72be10f077, type: 3}
+  m_Script: {fileID: 11500000, guid: a7e91cd2734c83c42b40fad0a8ffc542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startPos: 0
-  camera: {fileID: 1443551728}
   localCam: {fileID: 519420028}
+  mainCam: {fileID: 1443551728}
+  mainScript: {fileID: 1849582882}
   parallexEffect: 1.5
 --- !u!212 &1421193327
 SpriteRenderer:
@@ -3032,6 +3036,7 @@ MonoBehaviour:
   background1: {fileID: 147710228}
   background2: {fileID: 295593020}
   maxDistance: 8.9
+  split: 0
   splitScreenUI: {fileID: 271610052}
 --- !u!1 &1466964830
 GameObject:
@@ -3077,12 +3082,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1466964830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a062ac026559c4341ad75d72be10f077, type: 3}
+  m_Script: {fileID: 11500000, guid: a7e91cd2734c83c42b40fad0a8ffc542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startPos: 0
-  camera: {fileID: 1443551728}
   localCam: {fileID: 508109896}
+  mainCam: {fileID: 1443551728}
+  mainScript: {fileID: 58644058}
   parallexEffect: 1
 --- !u!212 &1466964833
 SpriteRenderer:
@@ -3954,13 +3960,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1849582880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a062ac026559c4341ad75d72be10f077, type: 3}
+  m_Script: {fileID: 11500000, guid: 635c265429200dd4085c002effa56e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camScript: {fileID: 1443551734}
   startPos: 0
-  camera: {fileID: 1443551728}
-  localCam: {fileID: 1443551728}
+  cam: {fileID: 1443551728}
   parallexEffect: 1.5
+  offset: 0
 --- !u!212 &1849582883
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4175,13 +4182,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1920238763}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a062ac026559c4341ad75d72be10f077, type: 3}
+  m_Script: {fileID: 11500000, guid: 635c265429200dd4085c002effa56e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camScript: {fileID: 1443551734}
   startPos: 0
-  camera: {fileID: 1443551728}
-  localCam: {fileID: 1443551728}
+  cam: {fileID: 1443551728}
   parallexEffect: 2
+  offset: 0
 --- !u!212 &1920238766
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4362,12 +4370,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2024799603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a062ac026559c4341ad75d72be10f077, type: 3}
+  m_Script: {fileID: 11500000, guid: a7e91cd2734c83c42b40fad0a8ffc542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startPos: 0
-  camera: {fileID: 1443551728}
   localCam: {fileID: 508109896}
+  mainCam: {fileID: 1443551728}
+  mainScript: {fileID: 1920238765}
   parallexEffect: 2
 --- !u!212 &2024799606
 SpriteRenderer:
@@ -4465,12 +4474,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2035777176}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a062ac026559c4341ad75d72be10f077, type: 3}
+  m_Script: {fileID: 11500000, guid: a7e91cd2734c83c42b40fad0a8ffc542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startPos: 0
-  camera: {fileID: 1443551728}
   localCam: {fileID: 519420028}
+  mainCam: {fileID: 1443551728}
+  mainScript: {fileID: 58644058}
   parallexEffect: 1
 --- !u!212 &2035777179
 SpriteRenderer:

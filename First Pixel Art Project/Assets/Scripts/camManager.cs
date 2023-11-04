@@ -19,7 +19,9 @@ public class camManager : MonoBehaviour
     [SerializeField] public GameObject background1;
     [SerializeField] public GameObject background2;
     [SerializeField] public float maxDistance = 15f;
-                   
+
+    [SerializeField] public bool split;
+
     [SerializeField] public GameObject splitScreenUI;
 
     private void Start()
@@ -30,17 +32,18 @@ public class camManager : MonoBehaviour
         splitScreenUI.GetComponent<RectTransform>().sizeDelta = new Vector2(3, Screen.height);
         if (Mathf.Abs(player1.transform.position.x - player2.transform.position.x) < maxDistance)
         {
+            split = false;
             cam.enabled = true;
             cam1.enabled = false;
-            cam2.enabled = false; 
+            cam2.enabled = false;
             background.active = true;
             background1.active = false;
             background2.active = false;
             splitScreenUI.SetActive(false);
-            followBoth();
         }
         else
         {
+            split = true;
             cam1.enabled = true;
             cam2.enabled = true;
             splitScreenUI.SetActive(true);
@@ -48,16 +51,18 @@ public class camManager : MonoBehaviour
             background1.active = true;
             background2.active = true;
             background.active = false;
-            if (player1.transform.position.x - player2.transform.position.x < 0)
-            { 
-                followP1(cam1);
-                followP2(cam2);
-            }
-            if (player1.transform.position.x - player2.transform.position.x > 0)
-            {
-                followP1(cam2);
-                followP2(cam1);
-            }
+
+        }
+        followBoth();
+        if (player1.transform.position.x - player2.transform.position.x < 0)
+        {
+            followP1(cam1);
+            followP2(cam2);
+        }
+        if (player1.transform.position.x - player2.transform.position.x > 0)
+        {
+            followP1(cam2);
+            followP2(cam1);
         }
     }
     public void followP1(Camera _cam)
