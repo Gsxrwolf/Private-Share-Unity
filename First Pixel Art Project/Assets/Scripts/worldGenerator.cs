@@ -103,7 +103,7 @@ public class worldGenerator : MonoBehaviour
 
     public void DeleteOldChunks(List<int> _chunkNum)
     {
-        Debug.Log("DeleteOldChunks");
+        //Debug.Log("DeleteOldChunks");
         foreach (int chunkNum in _chunkNum)
         {
             int curChunkNum = chunkNum + mapSize / 2;
@@ -113,22 +113,22 @@ public class worldGenerator : MonoBehaviour
 
     public bool ChunksChanged()
     {
-        Debug.Log("ChunksChanged");
+        //Debug.Log("ChunksChanged");
         newChunksToRender = visibleChunks.Except(lastVisibleChunks).ToList();
         if (newChunksToRender.Count > 0)
         {
-            Debug.Log("changed");
+            //Debug.Log("changed");
             return true;
         }
         else
         {
-            Debug.Log("not changed");
+            //Debug.Log("not changed");
             return false;
         }
     }
     public void IdentifyChunkToRender()
     {
-        Debug.Log("IdentifyChunkToRender");
+        //Debug.Log("IdentifyChunkToRender");
         visibleChunks.Clear();
         player1.pXPos = player1.player.transform.position.x;
         player1.curChunk = Mathf.RoundToInt(player1.pXPos / 18f);
@@ -187,13 +187,13 @@ public class worldGenerator : MonoBehaviour
             visibleChunks.Add(player2.curChunk);
             visibleChunks.Add(player2.curChunk + 1);
         }
-        Debug.Log("------------------------------------------------------------");
-        Debug.Log(player1.curChunk - player2.curChunk);
-        Debug.Log("------------------------------------------------------------");
+        //Debug.Log("------------------------------------------------------------");
+        //Debug.Log(player1.curChunk - player2.curChunk);
+        //Debug.Log("------------------------------------------------------------");
     }
     public void RenderNewChunks(List<int> _chunkNum)
     {
-        Debug.Log("RenderNewChunks");
+        //Debug.Log("RenderNewChunks");
         foreach (int chunkNum in _chunkNum)
         {
             int curChunkNum = chunkNum + mapSize / 2;

@@ -6,7 +6,6 @@ using UnityEngine;
 public class parallexMmain : MonoBehaviour
 {
 
-    [SerializeField] public camManager camScript;
 
     private float length;
     private float dist;
@@ -42,6 +41,6 @@ public class parallexMmain : MonoBehaviour
     }
     private void OnDisable()
     {
-        offset = startPos + dist;
+        offset = cam.transform.position.x * parallexEffect;
     }
 }

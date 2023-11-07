@@ -7,34 +7,36 @@ public class paarallexSplit : MonoBehaviour
 
 
     private float length;
-    [SerializeField] private float startPos;
+    [SerializeField] private float globalOffset;
     [SerializeField] public GameObject localCam;
     [SerializeField] public GameObject mainCam;
     [SerializeField] public parallexMmain mainScript;
     public float parallexEffect;
+    public float localOffset;
+    public float camPos;
 
 
     void OnEnable()
     {
-        float camOffset = mainCam.transform.position.x-localCam.transform.position.x;
-        startPos = mainScript.offset + camOffset;
+        localOffset = localCam.transform.position.x-mainCam.transform.position.x;
+        globalOffset = mainScript.offset;
+        camPos = globalOffset + localOffset;
         length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
     void LateUpdate()
     {
         float temp = (localCam.transform.position.x * (1 - parallexEffect));
-        float dist = (mainCam.transform.position.x * parallexEffect);
+        float dist = (localOffset * parallexEffect);
+        transform.position = new Vector2(globalOffset + dist , transform.position.y);
 
-        transform.position = new Vector2(startPos + dist , transform.position.y);
-
-        if (temp > startPos + length)
+        if (temp > globalOffset + length)
         {
-            startPos += length;
+            globalOffset += length;
         }
-        else if (temp < startPos - length)
+        else if (temp < globalOffset - length)
         {
-            startPos -= length;
+            globalOffset -= length;
         }
     }
 }

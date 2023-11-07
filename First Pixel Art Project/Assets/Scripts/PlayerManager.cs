@@ -38,12 +38,11 @@ public class PlayerManager : MonoBehaviour
 
     private void Update()
     {
-        float zRotation = transform.rotation.eulerAngles.z;
         animator.SetBool("walking", false);
 
         SprintCheck();
         InputCheck();
-        if(!climbing)
+        if (!climbing)
         {
             JumpCheck();
         }
@@ -51,7 +50,6 @@ public class PlayerManager : MonoBehaviour
         {
             ClimbCheck();
         }
-        AngelCheck(zRotation);
     }
 
     private void ClimbCheck()
@@ -142,30 +140,26 @@ public class PlayerManager : MonoBehaviour
             rB.AddForce(force, ForceMode2D.Impulse);
         }
     }
-        public void SprintCheck()
+    public void SprintCheck()
     {
-        if (Input.GetKey(KeyCode.RightShift) && this.tag == "Player2")
+        if (Input.GetKeyDown(KeyCode.RightShift) && this.tag == "Player2")
         {
             speed = sprintSpeed;
         }
-        if (Input.GetKey(KeyCode.LeftShift) && this.tag == "Player1")
+        if (Input.GetKeyDown(KeyCode.LeftShift) && this.tag == "Player1")
         {
             speed = sprintSpeed;
         }
-        if (!Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.RightShift))
+        if (Input.GetKeyUp(KeyCode.RightShift) && this.tag == "Player2")
+        {
+            speed = normalSpeed;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift) && this.tag == "Player1")
         {
             speed = normalSpeed;
         }
     }
 
-    public void AngelCheck(float zRotation)
-    {
-        if (zRotation > maxRotation || zRotation < -maxRotation)
-        {
-            rB.angularVelocity = 0f;
-            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0f);
-        }
-    }
 
     public void Step()
     {
@@ -196,5 +190,5 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    
+
 }
