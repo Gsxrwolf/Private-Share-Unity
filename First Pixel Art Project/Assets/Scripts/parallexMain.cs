@@ -13,7 +13,7 @@ public class parallexMmain : MonoBehaviour
     [SerializeField] public GameObject cam;
     public float parallexEffect;
 
-    public float offset;
+    public float tempLink;
 
     void Start()
     {
@@ -21,13 +21,13 @@ public class parallexMmain : MonoBehaviour
         length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
-    void LateUpdate()
+    void Update()
     {
 
         float temp = (cam.transform.position.x * (1 - parallexEffect));
         dist = (cam.transform.position.x * parallexEffect);
 
-        transform.position = new Vector2(startPos + dist, transform.position.y);
+        transform.position = new Vector2(dist, transform.position.y);
 
         if (temp > startPos + length)
         {
@@ -41,6 +41,6 @@ public class parallexMmain : MonoBehaviour
     }
     private void OnDisable()
     {
-        offset = cam.transform.position.x * parallexEffect;
+        tempLink = dist - cam.transform.position.x;
     }
 }

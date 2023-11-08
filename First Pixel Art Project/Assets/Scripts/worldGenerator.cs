@@ -8,6 +8,8 @@ using static worldGenerator;
 
 public class worldGenerator : MonoBehaviour
 {
+    public static worldGenerator Instance;
+
     [SerializeField] private Object mapPrefab1;
     [SerializeField] private Object mapPrefab2;
     [SerializeField] private Object mapPrefab3;
@@ -47,6 +49,15 @@ public class worldGenerator : MonoBehaviour
         }
     }
 
+    void Awake()
+    {
+        if(Instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        Instance = this;
+    }
     void Start()
     {
         player1 = new Player(p1);

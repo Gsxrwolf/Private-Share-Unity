@@ -19,15 +19,14 @@ public class PlayerManager : MonoBehaviour
 
 
     public float speed = 1f;
+    [SerializeField] public bool lock1;
+    [SerializeField] public bool lock2;
     [SerializeField] public float normalSpeed = 2f;
     [SerializeField] public float sprintSpeed = 4f;
     [SerializeField] public float climbSpeed = 1.5f;
     [SerializeField] public float jumpForce = 1.5f;
-    [SerializeField] public float maxRotation = 2f;
-    [SerializeField] public bool sprint = false;
-    [SerializeField] public bool jumping = false;
-    [SerializeField] public bool climbing = false;
-    [SerializeField] public float jumpTime;
+    private bool jumping = false;
+    public bool climbing = false;
 
     private void Start()
     {
@@ -39,7 +38,6 @@ public class PlayerManager : MonoBehaviour
     private void Update()
     {
         animator.SetBool("walking", false);
-
         SprintCheck();
         InputCheck();
         if (!climbing)
@@ -50,29 +48,31 @@ public class PlayerManager : MonoBehaviour
         {
             ClimbCheck();
         }
+
+
     }
 
     private void ClimbCheck()
     {
-        if (Input.GetKey(KeyCode.UpArrow) && this.tag == "Player2")
+        if (Input.GetKey(KeyCode.UpArrow) && this.tag == "Player2" && lock2 == false)
         {
             float force = 0;
             force += climbSpeed / 2;
             rB.velocity = new Vector2(rB.velocity.x, force);
         }
-        else if (Input.GetKey(KeyCode.W) && this.tag == "Player1")
+        else if (Input.GetKey(KeyCode.W) && this.tag == "Player1" && lock1 == false)
         {
             float force = 0;
             force += climbSpeed / 2;
             rB.velocity = new Vector2(rB.velocity.x, force);
         }
-        else if (Input.GetKey(KeyCode.DownArrow) && this.tag == "Player2")
+        else if (Input.GetKey(KeyCode.DownArrow) && this.tag == "Player2" && lock2 == false)
         {
             float force = 0;
             force -= climbSpeed / 2;
             rB.velocity = new Vector2(rB.velocity.x, force);
         }
-        else if (Input.GetKey(KeyCode.S) && this.tag == "Player1")
+        else if (Input.GetKey(KeyCode.S) && this.tag == "Player1" && lock1 == false)
         {
             float force = 0;
             force -= climbSpeed / 2;
@@ -86,7 +86,7 @@ public class PlayerManager : MonoBehaviour
 
     private void InputCheck()
     {
-        if (Input.GetKey(KeyCode.LeftArrow) && this.tag == "Player2")
+        if (Input.GetKey(KeyCode.LeftArrow) && this.tag == "Player2" && lock2 == false)
         {
             sR.flipX = true;
             animator.SetBool("walking", true);
@@ -94,7 +94,7 @@ public class PlayerManager : MonoBehaviour
             playerPos.x -= speed * Time.deltaTime;
             transform.position = playerPos;
         }
-        if (Input.GetKey(KeyCode.A) && this.tag == "Player1")
+        if (Input.GetKey(KeyCode.A) && this.tag == "Player1" && lock1 == false)
         {
             sR.flipX = true;
             animator.SetBool("walking", true);
@@ -102,7 +102,7 @@ public class PlayerManager : MonoBehaviour
             playerPos.x -= speed * Time.deltaTime;
             transform.position = playerPos;
         }
-        if (Input.GetKey(KeyCode.RightArrow) && this.tag == "Player2")
+        if (Input.GetKey(KeyCode.RightArrow) && this.tag == "Player2" && lock2 == false)
         {
             sR.flipX = false;
             animator.SetBool("walking", true);
@@ -110,7 +110,7 @@ public class PlayerManager : MonoBehaviour
             playerPos.x += speed * Time.deltaTime;
             transform.position = playerPos;
         }
-        if (Input.GetKey(KeyCode.D) && this.tag == "Player1")
+        if (Input.GetKey(KeyCode.D) && this.tag == "Player1" && lock1 == false)
         {
             sR.flipX = false;
             animator.SetBool("walking", true);
@@ -121,7 +121,7 @@ public class PlayerManager : MonoBehaviour
     }
     public void JumpCheck()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) && !jumping && this.tag == "Player2")
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !jumping && this.tag == "Player2" && lock2 == false)
         {
             Jump();
             jumping = true;
@@ -130,7 +130,7 @@ public class PlayerManager : MonoBehaviour
             force.y += jumpForce / 2;
             rB.AddForce(force, ForceMode2D.Impulse);
         }
-        if (Input.GetKeyDown(KeyCode.W) && !jumping && this.tag == "Player1")
+        if (Input.GetKeyDown(KeyCode.W) && !jumping && this.tag == "Player1" && lock1 == false)
         {
             Jump();
             jumping = true;
@@ -142,19 +142,19 @@ public class PlayerManager : MonoBehaviour
     }
     public void SprintCheck()
     {
-        if (Input.GetKeyDown(KeyCode.RightShift) && this.tag == "Player2")
+        if (Input.GetKeyDown(KeyCode.RightShift) && this.tag == "Player2" && lock2 == false)
         {
             speed = sprintSpeed;
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift) && this.tag == "Player1")
+        if (Input.GetKeyDown(KeyCode.LeftShift) && this.tag == "Player1" && lock1 == false)
         {
             speed = sprintSpeed;
         }
-        if (Input.GetKeyUp(KeyCode.RightShift) && this.tag == "Player2")
+        if (Input.GetKeyUp(KeyCode.RightShift) && this.tag == "Player2" && lock2 == false)
         {
             speed = normalSpeed;
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift) && this.tag == "Player1")
+        if (Input.GetKeyUp(KeyCode.LeftShift) && this.tag == "Player1" && lock1 == false)
         {
             speed = normalSpeed;
         }
@@ -189,6 +189,4 @@ public class PlayerManager : MonoBehaviour
             animator.SetBool("jumping", false);
         }
     }
-
-
 }
