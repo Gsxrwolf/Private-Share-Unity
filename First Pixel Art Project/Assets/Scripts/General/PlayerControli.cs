@@ -5,7 +5,7 @@ using Unity.Mathematics;
 using UnityEditor.Rendering;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerControli : MonoBehaviour
 {
     public Vector2 playerPos;
     public Animator animator;

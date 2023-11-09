@@ -11,12 +11,12 @@ public class climbTrigger : MonoBehaviour
         if (other.CompareTag("Player1") || other.CompareTag("Player2"))
         {
             effectedPlayer = other.gameObject;
-            PlayerManager playerManager = effectedPlayer.GetComponent<PlayerManager>();
+            PlayerControli playerControli = effectedPlayer.GetComponent<PlayerControli>();
             Rigidbody2D rigidbody2D = effectedPlayer.GetComponent<Rigidbody2D>();
-            if (playerManager != null)
+            if (playerControli != null)
             {
                 rigidbody2D.gravityScale = 0;
-                playerManager.climbing = true;
+                playerControli.climbing = true;
             }
         }
     }
@@ -25,7 +25,7 @@ public class climbTrigger : MonoBehaviour
         if (other.CompareTag("Player1") || other.CompareTag("Player2"))
         {
             effectedPlayer = other.gameObject;
-            PlayerManager playerManager = effectedPlayer.GetComponent<PlayerManager>();
+            PlayerControli playerManager = effectedPlayer.GetComponent<PlayerControli>();
             Rigidbody2D rigidbody2D = effectedPlayer.GetComponent<Rigidbody2D>();
             if (playerManager != null)
             {

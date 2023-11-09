@@ -5,6 +5,9 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class camManager : MonoBehaviour
 {
+    [SerializeField] private bool useBackground = true;
+
+
     [SerializeField] public GameObject player1;
     [SerializeField] public GameObject player2;
     [SerializeField] public GameObject camera1;
@@ -33,9 +36,12 @@ public class camManager : MonoBehaviour
             cam.enabled = true;
             cam1.enabled = false;
             cam2.enabled = false;
-            background.active = true;
-            background1.active = false;
-            background2.active = false;
+            if (useBackground)
+            {
+                background.SetActive(true);
+                background1.SetActive(false);
+                background2.SetActive(false);
+            }
             splitScreenUI.SetActive(false);
             followBoth();
         }
@@ -46,22 +52,23 @@ public class camManager : MonoBehaviour
             cam2.enabled = true;
             splitScreenUI.SetActive(true);
             cam.enabled = false;
-            background1.active = true;
-            background2.active = true;
-            background.active = false;
+            if (useBackground)
+            {
+                background1.SetActive(true);
+                background2.SetActive(true);
+                background.SetActive(false);
+            }
+            if (player1.transform.position.x - player2.transform.position.x < 0)
+            {
+                followP1(cam1);
+                followP2(cam2);
+            }
+            if (player1.transform.position.x - player2.transform.position.x > 0)
+            {
+                followP1(cam2);
+                followP2(cam1);
+            }
 
-
-        }
-        followBoth();
-        if (player1.transform.position.x - player2.transform.position.x < 0)
-        {
-            followP1(cam1);
-            followP2(cam2);
-        }
-        if (player1.transform.position.x - player2.transform.position.x > 0)
-        {
-            followP1(cam2);
-            followP2(cam1);
         }
     }
     public void followP1(Camera _cam)

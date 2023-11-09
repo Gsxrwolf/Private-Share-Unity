@@ -8,10 +8,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
 
-    public static GameManager Instance;
+    public static PlayerManager Instance { get; private set;}
 
     Stopwatch stopwatch = new Stopwatch();
     [SerializeField] public GameObject p1;
@@ -47,10 +47,10 @@ public class GameManager : MonoBehaviour
         if (Mathf.Abs(p1.transform.position.x - p2.transform.position.x) < 8.9)
         {
             stopwatch.Stop();
-            p1.GetComponent<PlayerManager>().lock1 = false;
-            p1.transform.GetChild(2).gameObject.active = true;
-            p2.GetComponent<PlayerManager>().lock2 = false;
-            p2.transform.GetChild(2).gameObject.active = true;
+            p1.GetComponent<PlayerControli>().lock1 = false;
+            p1.transform.GetChild(2).gameObject.SetActive(true);
+            p2.GetComponent<PlayerControli>().lock2 = false;
+            p2.transform.GetChild(2).gameObject.SetActive(true);
             uiText.GetComponent<TextMeshProUGUI>().text = null;
 
         }
@@ -64,10 +64,10 @@ public class GameManager : MonoBehaviour
     {
         if (curP == 1)
         {
-            p1.GetComponent<PlayerManager>().lock1 = false;
-            p1.transform.GetChild(2).gameObject.active = true;
-            p2.GetComponent<PlayerManager>().lock2 = true;
-            p2.transform.GetChild(2).gameObject.active = false;
+            p1.GetComponent<PlayerControli>().lock1 = false;
+            p1.transform.GetChild(2).gameObject.SetActive(true);
+            p2.GetComponent<PlayerControli>().lock2 = true;
+            p2.transform.GetChild(2).gameObject.SetActive(false);
 
             stopwatch.Start();
 
@@ -83,10 +83,10 @@ public class GameManager : MonoBehaviour
         }
         if (curP == 2)
         {
-            p2.GetComponent<PlayerManager>().lock2 = false;
-            p2.transform.GetChild(2).gameObject.active = true;
-            p1.GetComponent<PlayerManager>().lock1 = true;
-            p1.transform.GetChild(2).gameObject.active = false;
+            p2.GetComponent<PlayerControli>().lock2 = false;
+            p2.transform.GetChild(2).gameObject.SetActive(true);
+            p1.GetComponent<PlayerControli>().lock1 = true;
+            p1.transform.GetChild(2).gameObject.SetActive(false);
 
             stopwatch.Start();
 
