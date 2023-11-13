@@ -16,9 +16,10 @@ public class Mouth : MonoBehaviour
     [SerializeField] private AudioSource exploSound;
 
     [SerializeField] private GameObject screwdriverRotationPoint;
-    [SerializeField] private Rigidbody2D sRB;
+    private Rigidbody2D sRB;
+
     [SerializeField] private Rigidbody2D myRB;
-    [SerializeField] private float mouthRotation;
+    [SerializeField] private float mouthRotation = 0;
     [SerializeField] private float multiplyer = -0.01f;
     [SerializeField] private float resetSpeed = 1f;
     [SerializeField] private float dropThreshold = -0.9f;
@@ -27,6 +28,7 @@ public class Mouth : MonoBehaviour
 
 
     int i = 0;
+    private bool exploRunning = false;
 
     private void Start()
     {
@@ -34,20 +36,23 @@ public class Mouth : MonoBehaviour
     }
     void Update()
     {
-        if (myRB.velocity.y < 0)
+        if (exploRunning == false)
         {
-            mouthRotation += myRB.velocity.y * multiplyer * -0.001f;
+            if (myRB.velocity.y < 0 && mouthRotation < 80)
+            {
+                mouthRotation += myRB.velocity.y * multiplyer * -0.001f;
+            }
+            else if ((myRB.velocity.y == 0 && droped && mouthRotation > 0f) || (myRB.velocity.y == 0 && !droped && mouthRotation > 3.3f))
+            {
+                mouthRotation -= resetSpeed;
+            }
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, mouthRotation);
         }
-        else if ((myRB.velocity.y == 0 && droped && mouthRotation > 0f) || (myRB.velocity.y == 0 && !droped && mouthRotation > 3.3f))
-        {
-            mouthRotation -= resetSpeed;
-        }
-        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, mouthRotation);
 
         if (!droped)
         {
             screwdriverRotationPoint.transform.rotation = Quaternion.Euler(screwdriverRotationPoint.transform.rotation.eulerAngles.x, screwdriverRotationPoint.transform.rotation.eulerAngles.y, (-mouthRotation * 3.5f) + 10.5f);
-            if (screwdriverRotationPoint.transform.rotation.z < dropThreshold)
+            if (mouthRotation > dropThreshold)
             {
                 droped = true;
                 screwdriverRotationPoint.transform.GetChild(0).gameObject.GetComponent<PolygonCollider2D>().enabled = true;
@@ -59,7 +64,7 @@ public class Mouth : MonoBehaviour
         if (mouthRotation <= 0f)
         {
 
-
+            exploRunning = true;
             if (explo6.transform.localScale.x > 4 && exploState == 0)
             {
                 exploState = 1;
@@ -77,7 +82,6 @@ public class Mouth : MonoBehaviour
                     exploSound.Play();
                     i++;
                 }
-                Debug.Log(exploState);
                 explo1.transform.localScale += exploUpscaleMultipyer * 3f * Time.deltaTime;
                 explo2.transform.localScale += exploUpscaleMultipyer * 2.5f * Time.deltaTime;
                 explo3.transform.localScale += exploUpscaleMultipyer * 2f * Time.deltaTime;
@@ -87,7 +91,6 @@ public class Mouth : MonoBehaviour
             }
             else if (exploState == 1)
             {
-                Debug.Log(exploState);
                 explo1.transform.localScale -= exploUpscaleMultipyer * 3f * Time.deltaTime;
                 explo2.transform.localScale -= exploUpscaleMultipyer * 2.5f * Time.deltaTime;
                 explo3.transform.localScale -= exploUpscaleMultipyer * 2f * Time.deltaTime;
@@ -97,7 +100,6 @@ public class Mouth : MonoBehaviour
             }
             else if (exploState == 2)
             {
-                Debug.Log(exploState);
                 explo1.transform.localScale += exploUpscaleMultipyer * 42f * Time.deltaTime;
                 explo2.transform.localScale += exploUpscaleMultipyer * 30f * Time.deltaTime;
                 explo3.transform.localScale += exploUpscaleMultipyer * 20f * Time.deltaTime;
