@@ -40,7 +40,7 @@ public class Mouth : MonoBehaviour
         {
             if (myRB.velocity.y < 0 && mouthRotation < 80)
             {
-                mouthRotation += myRB.velocity.y * multiplyer * -0.001f;
+                mouthRotation += myRB.velocity.y * multiplyer * -Time.deltaTime;
             }
             else if ((myRB.velocity.y == 0 && droped && mouthRotation > 0f) || (myRB.velocity.y == 0 && !droped && mouthRotation > 3.3f))
             {

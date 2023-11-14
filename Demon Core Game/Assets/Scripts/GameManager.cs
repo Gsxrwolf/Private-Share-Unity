@@ -20,10 +20,20 @@ public class GameManager : MonoBehaviour
 
     public int curLevel = 1;
 
-
     public void loadCurLevel()
     {
         SceneManager.LoadScene(curLevel);
     }
-
+    public void loadMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void loadLevel(int _sceneIndex)
+    {
+        SceneManager.LoadScene(_sceneIndex);
+    }
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
