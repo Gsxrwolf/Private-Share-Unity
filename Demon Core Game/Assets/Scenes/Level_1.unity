@@ -1270,19 +1270,6 @@ Transform:
   - {fileID: 28963869}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &233209836284083457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8682806485423769957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7590f7fba21cffc4ba4e9a22d57859d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _stats: {fileID: 3733873084356966949}
 --- !u!1 &359449233051798581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,7 +1349,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1182485307233771464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e3cd1d786eb2bf4f916bc87b7e3d7ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 430f2c2dece2be8408673748d34be254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &905524020056225327
@@ -1374,11 +1361,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2155489262014667405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7062642fac4f3e4bb27f4218b1876b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 86be73451d2b7ca4495c9301dc7a36c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 5370545602219834184}
-  dumping: 3
+  dumping: 1.5
   offset: {x: 0, y: 0}
   hasLimit: 0
   leftLimit: 0
@@ -1462,7 +1449,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6118146929379987511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bef75216a6f9cf84a831570964643f47, type: 3}
+  m_Script: {fileID: 11500000, guid: d1b4916ee60bebe4bbff13b2abc1a9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
@@ -2095,23 +2082,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 5588555995984142431}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7242c7a6c0b0104d8ab5e9c5182b8cd, type: 3}
+  m_Script: {fileID: 11500000, guid: b59de282d3244104c9be2fecb612c3d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explo1: {fileID: 8772698632186617441}
-  explo2: {fileID: 5552252700848104752}
-  explo3: {fileID: 1901514635744506472}
-  explo4: {fileID: 6860135684442457903}
-  explo5: {fileID: 6916353105470791903}
-  explo6: {fileID: 1966121916726468876}
-  exploUpscaleMultipyer: {x: 8, y: 8, z: 0}
+  explo1: {fileID: 6732471425238225378}
+  explo2: {fileID: 8772698632186617441}
+  explo3: {fileID: 5552252700848104752}
+  explo4: {fileID: 1901514635744506472}
+  explo5: {fileID: 6860135684442457903}
+  explo6: {fileID: 6916353105470791903}
+  exploUpscaleMultipyer: {x: 0, y: 0, z: 0}
   exploSound: {fileID: 3462399650344566862}
   screwdriverRotationPoint: {fileID: 8467748336244828640}
   myRB: {fileID: 6450853548743676435}
-  mouthRotation: 4
-  multiplyer: 0.8
-  resetSpeed: 0.5
-  dropThreshold: 30
+  mouthRotation: 3
+  multiplyer: -0.01
+  resetSpeed: 1
+  dropThreshold: -0.9
   droped: 0
 --- !u!212 &2894159544695003487
 SpriteRenderer:
@@ -2489,27 +2476,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8682806485423769957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99277c578ccfcc940a2ab8b6fb85438a, type: 3}
+  m_Script: {fileID: 11500000, guid: 03c254269b62ca6488d1126248b233fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  SnapInput: 1
-  VerticalDeadZoneThreshold: 0.3
-  HorizontalDeadZoneThreshold: 0.1
-  MaxSpeed: 40
-  Acceleration: 200
-  GroundDeceleration: 100
-  AirDeceleration: 100
-  GroundingForce: -2
-  GrounderDistance: 0.118
-  JumpPower: 50
-  MaxFallSpeed: 100
-  FallAcceleration: 100
-  JumpEndEarlyGravityModifier: 2
-  CoyoteTime: 0.2
-  JumpBuffer: 1.2
+  _stats: {fileID: 8682806485423769958}
 --- !u!4 &3813159931755440447
 Transform:
   m_ObjectHideFlags: 0
@@ -2793,12 +2763,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 78d7e750baf518f46bc306abfb1261ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e05eae8260641124999ff077c2aa3d18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.05}
+  m_Size: {x: 6.7, y: 1.41}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3110,7 +3080,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 6.7, y: 1.41}
-    newSize: {x: 5.12, y: 5.05}
+    newSize: {x: 6.7, y: 1.41}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -3300,7 +3270,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fca92803d07db6747884c56ae0578ba7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 199ab0b45eed64941b778981752129a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3612,7 +3582,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ad80a335db24c7845ac6940ead23edeb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09f3970e37ff03f49815552b1528a146, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4023,8 +3993,8 @@ GameObject:
   - component: {fileID: 5370545602219834184}
   - component: {fileID: 4697783926065864698}
   - component: {fileID: 6450853548743676435}
-  - component: {fileID: 233209836284083457}
   - component: {fileID: 3733873084356966949}
+  - component: {fileID: 8682806485423769958}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -4032,6 +4002,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8682806485423769958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8682806485423769957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6f5367eb0ab744f91849301e289d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  SnapInput: 1
+  VerticalDeadZoneThreshold: 0.3
+  HorizontalDeadZoneThreshold: 0.1
+  MaxSpeed: 14
+  Acceleration: 120
+  GroundDeceleration: 60
+  AirDeceleration: 30
+  GroundingForce: -1.5
+  GrounderDistance: 0.05
+  JumpPower: 36
+  MaxFallSpeed: 40
+  FallAcceleration: 110
+  JumpEndEarlyGravityModifier: 3
+  CoyoteTime: 0.15
+  JumpBuffer: 0.2
 --- !u!114 &8724232486880838265
 MonoBehaviour:
   m_ObjectHideFlags: 0
